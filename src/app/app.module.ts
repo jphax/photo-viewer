@@ -6,12 +6,14 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { PhotosComponent } from './photos/photos.component';
 import { AppService } from './app.service';
+import { CommentComponent } from './photos/comment/comment.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PhotosComponent
+    PhotosComponent,
+    CommentComponent
   ],
   imports: [
     BrowserModule,

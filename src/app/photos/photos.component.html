@@ -1,15 +1,16 @@
 <div class="album">
-    <h2>{{album.title }}</h2>
-    <h3>{{user.name }}'s album</h3>
+    <h2>{{album ? album.title : '&not;'}}</h2>
+    <h3>{{user ? user.name : '&not;'}}'s album</h3>
     <div class="controls">
         <button type="prev" name="button" (click)="previousPage()" [hidden]="(currentPage < 2)"><<</button>
-        <span>Page {{currentPage}}/{{photoPages.length-1}}</span>
+        <span>Page {{currentPage || '&not;'}}/{{photoPages.length-1}}</span>
         <button type="prev" name="button" (click)="nextPage()" [hidden]="(currentPage == photoPages.length-1)">>></button>
     </div>
     <div class="photo-holder">
         <div class="photo" *ngFor="let photo of photoPages[currentPage]">
-            <img src="{{photo.thumbnailUrl}}" alt="{{photo.title}}">
+            <img src="{{photo.thumbnailUrl}}" alt="{{photo.title || '&not;'}}">
             <p>{{photo.title}}</p>
         </div>
     </div>
+    <app-comment></app-comment>
 </div>

@@ -3,6 +3,7 @@ import { AppService } from '../app.service';
 import { Album } from '../models/album';
 import { Photo } from '../models/photo';
 import { User } from '../models/user';
+import { CommentComponent } from './comment/comment.component';
 
 
 @Component({
@@ -14,7 +15,7 @@ export class PhotosComponent implements OnInit {
 
     public album: Album;
     public user: User;
-    public photoPages: Array<Photo[]>;
+    public photoPages = [];
     public currentPage = 1;
 
     constructor(private appService: AppService) { }

@@ -1,0 +1,12 @@
+.comment{
+    display: grid;
+    grid-template-rows: 30px, 20px, 100px;
+    input{
+        background-color: #333;
+        border-bottom: 2px solid grey;
+        color: grey;
+    }
+    textarea{
+        background-color: #333;
+    }
+}
